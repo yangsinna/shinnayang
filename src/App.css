@@ -1,0 +1,87 @@
+.my {
+  text-align: center;
+  background-color: coral;
+  color: white;
+  text-shadow: 2px 2px 2px gray;
+  padding: 10px;
+}
+.my1 {
+  text-align: left;
+  background-color: coral;
+  color: white;
+  text-shadow: 2px 2px 2px gray;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.fi {
+  font-family: sans-serif;
+  text-align: center;
+  height: 40px;
+  width: 60px;
+  background: white;
+  float: left;
+}
+
+.up {
+  text-align: left;
+}
+
+.btn-container {
+  text-align: right;
+}
+
+.src {
+  text-decoration: none;
+}
+
+.bar {
+  padding: 40px;
+}
+.b1 {
+  border: 1px solid black;
+  float: left;
+  width: 33%;
+  height: 800px;
+  margin: auto;
+}
+.b2 {
+  border: 1px solid black;
+  float: left;
+  width: 33%;
+  height: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 1px;
+}
+.b3 {
+  border: 1px solid black;
+  float: left;
+  width: 33%;
+  height: 800px;
+  margin: auto;
+}
+.I1 {
+  margin: auto;
+  display: block;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.border.rounded.img-preview {
+  width: 300px;
+  height: 300px;
+}
+.leftF {
+  float: left;
+  padding: 30px;
+}
