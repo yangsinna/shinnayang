@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './../App.css';
 import Nav from 'react-bootstrap/Nav';
-import TodoList from './TodoList';
+import Playground from './Playground';
 import ImageSlider from './imageSlider';
 
 function Main() {
@@ -39,7 +39,7 @@ function Main() {
           <ImageSlider />
         </div>
         <div className="b3">
-          <TodoList />
+          <Playground/>
         </div>
       </div>
     </>

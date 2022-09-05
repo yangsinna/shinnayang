@@ -1,15 +1,15 @@
 .my {
   text-align: center;
-  background-color: coral;
+  background-color: #FFCBCB;
   color: white;
-  text-shadow: 2px 2px 2px gray;
-  padding: 10px;
+  text-shadow: 2px 2px 2px black;
+  padding: 30px;
 }
 .my1 {
   text-align: left;
-  background-color: coral;
+  background-color:#FFCBCB;
   color: white;
-  text-shadow: 2px 2px 2px gray;
+  text-shadow: 2px 2px 2px black;
   padding: 10px;
   padding-left: 30px;
 }
@@ -84,4 +84,18 @@
 .leftF {
   float: left;
   padding: 30px;
+}
+.app {
+  text-align: center;
+  background-color: coral;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.name{
+  color: white;
+  text-align: center;
+}
+.menubar{
+  margin:auto;
 }

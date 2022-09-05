@@ -1,16 +1,17 @@
 import React from 'react';
 import App from './../App.css';
-import Button from 'react-bootstrap/Button';
-import File from './File';
+import Sqim from './Sqim'
+
 
 function Square() {
   return (
     <>
       <div>
         <h2 className="my1">레시피 자랑해주세요(가제)</h2>
-      </div>
+      </div> 
 
-      <div className="Im"></div>
+      <div className="Im"> <Sqim/>
+        </div>
     </>
   );
 }
