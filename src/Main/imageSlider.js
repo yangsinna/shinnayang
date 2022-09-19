@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import './imageSlider.css';
 import dataSlider from './imageSliderData';
 
-export default function ImageSlider() {
+function ImageSlider({realData}) {
   const [sliderIndex, setSliderIndex] = useState(1);
-
+  
   const moveDot = (index) => {
     setSliderIndex(index);
   };
@@ -30,14 +30,14 @@ export default function ImageSlider() {
   }, 400);
   return (
     <div className="slider-container">
-      {dataSlider &&
-        dataSlider.map((img, id) => {
+      {realData &&
+        realData.map((img, id) => {
           return (
             <div
               key={img.id}
               className={sliderIndex === id + 1 ? 'slide active-anim' : 'slide'}
             >
-              <img src={img.url} />
+              <img src={img.mainIMG} />
             </div>
           );
         })}
@@ -65,3 +65,4 @@ export default function ImageSlider() {
     </div>
   );
 }
+export default ImageSlider;

@@ -6,11 +6,13 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import IconButton from "@material-ui/core/IconButton";
+import Date from "./Date";
+
 
 
 export default function Playground() {
   const defaultProps = {
-    options: top100Films,
+    options: top100Foods,
     getOptionLabel: (option) => option.title,
     filterOptions: (options, state) => {
       let newOptions = [];
@@ -19,26 +21,26 @@ export default function Playground() {
           newOptions.push(option);
         }
       });
-      return newOptions.filter((movie) => !movies.includes(movie));
+      return newOptions.filter((food) => !foods.includes(food));
     }
   };
 
-  const [movies, setMovies] = useState([]);
+  const [foods, setMovies] = useState([]);
   const [key, setKey] = useState(0);
 
   return (
-    <div style={{ width: 300 }}>
+    <div style={{ width: 600 }}>
       <Autocomplete
         {...defaultProps}
         id="select-on-focus"
         renderTags={() => null}
         renderInput={(params) => (
-          <TextField {...params} label="movies" margin="normal" />
+          <TextField {...params} label="foods" margin="normal" />
         )}
-        onChange={(e, movie) => {
-          if (movie) {
+        onChange={(e, food) => {
+          if (food) {
             // this line prevents an error if no movie is selected
-            setMovies([...movies, movie.title]);
+            setMovies([...foods, food.title]);
           }
           // this is supposed to clear the Autocomplete component by forcing a rerender.
           // Works in my project but not here.
@@ -46,14 +48,14 @@ export default function Playground() {
         }}
       />
       <List>
-        {movies.map((movie) => (
-          <ListItem key={movie.title}>
-            <ListItemText primary={movie} />
+        {foods.map((food) => (
+          <ListItem key={food.title}>
+            <ListItemText primary={food} /><Date/>
             <IconButton
               key={key}
               aria-label="delete"
               onClick={() => {
-                setMovies(() => movies.filter((m) => m !== movie));
+                setMovies(() => foods.filter((m) => m !== food));
               }}
             >
               <HighlightOffIcon />
@@ -66,11 +68,11 @@ export default function Playground() {
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-  { title: "The Shawshank Redemption", year: 1994 },
+const top100Foods = [
+  { title: "가지", year: 1994 },
   { title: "요거트", year: 1994 },
-  { title: "The Shawshank Redemption", year: 1994 },
-  { title: "The Shawshank Redemption", year: 1994 },
+  { title: "소고기", year: 1994 },
+  { title: "우유", year: 1994 },
   { title: "The Godfather", year: 1972 },
   { title: "The Godfather: Part II", year: 1974 },
   { title: "The Dark Knight", year: 2008 },
